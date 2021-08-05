@@ -42,15 +42,33 @@
     </div>
         <script>
             function initMap(){
+               //The options for the map
+
                 var options={
-                    zoom:8,
-                    center:{lat:1.1018,lng:-37.0144}
+                    zoom:6,
+                    center:{lat:1.1018,lng:37.0144}
                 }
 
+              //Embedding the map to a div    
                 var map=new
                 google.maps.Map(document.getElementById('map'),options);
+
+              //Adding a  marker
+                var marker = new google.maps.Marker({
+                position:{lat:1.0314,lng:36.8681},
+                map:map
+
+               }); 
+                var infoWindow =new google.maps.infoWindow({
+                    content:"<h2>Thika</h2>"
+                });
+                marker.addListener('click',function(){
+                    infoWindow.open(map,marker);
+                })
+
             }
         </script>
           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaBbFXWBQ0Okozg-ufv2QsDCTBBvYx4rk&callback=initMap"></script>
+          <script src="/js/script.js"></script>
 </body>
 </html>
