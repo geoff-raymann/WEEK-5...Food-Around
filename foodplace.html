@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #map{
+            height: 400px;
+            width: 100%;
+            background-color: aqua;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid" >
+        <div class="row d-flex justify-content-between" id="row1">
+            <div class="col-lg-3 col-md-3" >
+                <img src="./images/foodplace3.jpeg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-3" >
+                <img src="./images/foodplace3.jpeg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-3" >
+                <img src="./images/foodplace3.jpeg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-3" >
+                <img src="./images/foodplace3.jpeg" alt="">
+            </div>
+        </div>     
+    </div>
+    <h1>My Google Map</h1>
+    <div id="map" class="map">
+
+    </div>
+        <script>
+            function initMap(){
+                var options={
+                    zoom:8,
+                    center:{lat:1.1018,lng:-37.0144}
+                }
+
+                var map=new
+                google.maps.Map(document.getElementById('map'),options);
+            }
+        </script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaBbFXWBQ0Okozg-ufv2QsDCTBBvYx4rk&callback=initMap"></script>
+</body>
+</html>
